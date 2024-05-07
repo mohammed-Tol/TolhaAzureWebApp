@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 var connStr = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
-
+     
 builder.Services.AddDbContext<CustomersDbContext>(options =>
 {
     options.UseSqlServer(connStr);
